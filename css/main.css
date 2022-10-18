@@ -12,7 +12,7 @@
    ========================================================================== */
 
 html {
-  color: #222;
+  color: purple;
   font-size: 1em;
   line-height: 1.4;
 }
@@ -93,29 +93,56 @@ footer {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background-color: #202322;
+}
+header {
+  padding: 15px 0;
 }
 header .content-wrapper {
   display: flex;
   justify-content: center;
   align-content: center;
   flex-flow: row wrap;
+  margin: 0;
 }
 header figure img {
 max-width: 230px;
 }
 header nav {
+  width: 60%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-flow: row wrap;
 }
+.header-divider {
+  width: 112%;
+  padding: 1px 55.5%;
+  background-color: #3a3a3a;
+}
 header nav ul {
+  width: 100%;
   display: flex;
   justify-content: space-around;
 }
+
 .content-wrapper {
+  width: 90%;
+  margin: 50px 0;
   display: flex;
   flex-flow: row wrap;
+}
+footer {
+  flex-direction: column;
+}
+footer .content-wrapper {
+  width: 55%;
+}
+footer p {
+  margin: 0;
+}
+footer .contact {
+  margin-bottom: 50px;
 }
 footer .social-icons {
   display: flex;
@@ -126,6 +153,9 @@ footer .social p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+footer .copyright {
+  margin: 20px;
 }
 /* ==========================================================================
    HOME PAGE STYLES
@@ -140,14 +170,27 @@ aside {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-
 }
-.features {
+.form, .form-description {
+  width: 100%;
+}
+.features, .features-items {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+  align-items: center;
 }
-.features .features-icons{
+.features h2 {
+  margin-bottom: 60px;
+}
+.features p {
+  margin: 0;
+}
+.features article {
+  width: 55%;
+  margin: 25px 0;
+}
+.features-icons{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -158,9 +201,18 @@ aside {
   justify-content: center;
   flex-flow: row wrap;
 }
+.reviews h2 {
+  width: 88%;
+  margin-bottom: 25px;
+}
+.reviews h3 {
+  width: 50%;
+  margin: 25px 0;
+}
+
 /* ==========================================================================
   ABOUT STYLES
-   ========================================================================== */
+ ========================================================================== */
 .mission {
   display: flex;
   justify-content: center;
@@ -168,7 +220,6 @@ aside {
   flex-flow: row wrap;
 }
 .contact {
-  display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
