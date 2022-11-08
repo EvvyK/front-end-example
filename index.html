@@ -18,7 +18,9 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500&display=swap" rel="stylesheet"> 
   <meta name="theme-color" content="#fafafa">
 </head>
 
@@ -55,10 +57,9 @@
         </div>
         <div class="form">
           <h3>Find out more</h3>
-          <input type="text" placeholder="name@email.com" name="mail" required>
-          <input type="button" value="Download Itinerary">
+          <input type="text" placeholder="name@email.com" name="mail" required class="input"/>
+          <input type="button" value="download itinerary" class="btn"/>
         </div>
-      </div>
       </div>
     </aside>
     <section class="features">
@@ -107,12 +108,16 @@
       <div class="content-wrapper">
         <h2>Be a better team in 5 days, like these.</h2>
         <!--image placeholder-->
-        <h3>LaCrue Bottling Co. October 2017</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        <article>
+          <div>
+            <h3>LaCrue Bottling Co. October 2017</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
           dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
           ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
           fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
           mollit anim id est laborum.</p>
+          </div>
+        </article>  
       </div>
     </section>
   </main>

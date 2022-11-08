@@ -12,9 +12,12 @@
    ========================================================================== */
 
 html {
-  color: purple;
   font-size: 1em;
   line-height: 1.4;
+  font-family: 'Open Sans', sans-serif;
+}
+nav, h1, h2, h3, h4 {
+  font-family: 'Poppins', sans-serif;
 }
 
 /*
@@ -124,8 +127,17 @@ header nav ul {
   width: 100%;
   display: flex;
   justify-content: space-around;
+  list-style: none;
+  color: #e2e3ed;
+  padding: 0;
 }
 
+header nav a {
+  text-decoration: none;
+}
+header nav a:visited {
+  color: #e2e3ed;
+}
 .content-wrapper {
   width: 90%;
   margin: 50px 0;
@@ -133,10 +145,12 @@ header nav ul {
   flex-flow: row wrap;
 }
 footer {
-  flex-direction: column;
+  color: #e2e3ed;
+  text-align: center;
 }
 footer .content-wrapper {
   width: 55%;
+  justify-content: center;
 }
 footer p {
   margin: 0;
@@ -156,6 +170,7 @@ footer .social p {
 }
 footer .copyright {
   margin: 20px;
+  width: 90%;
 }
 /* ==========================================================================
    HOME PAGE STYLES
@@ -170,9 +185,28 @@ aside {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background-color: #527158;
+  color: #e2e3ed;
+}
+.form {
+  display: flex;
+  flex-flow: column;
 }
 .form, .form-description {
   width: 100%;
+}
+.input {
+  width: 288px;
+  font-style: italic;
+  height: 30px;
+}
+.btn {
+  margin-top: 25px;
+  background-color: #2a423a;
+  color: whitesmoke;
+  text-transform: uppercase;
+  width: 295px;
+  height: 30px;
 }
 .features, .features-items {
   display: flex;
@@ -200,6 +234,8 @@ aside {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+  background: #2a423a;
+  color: #e2e3ed;
 }
 .reviews h2 {
   width: 88%;
@@ -218,11 +254,31 @@ aside {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background-color: #527158;
+  color: #e2e3ed;
 }
-.contact {
+.mission article {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.contact-section {
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background: #2a423a;
+  color: #e2e3ed;
+}
+.contact-section .features-items{
+  justify-content: left;
+}
+.contact-section article {
+  width: 75%;
+}
+address {
+  font-style: normal;
 }
 /* ==========================================================================
    FAQ STYLES
@@ -232,6 +288,12 @@ aside {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+}
+.faq-content {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10%;
+  align-items: start;
 }
 .faq .content-wrapper {
   display: flex;
@@ -323,13 +385,95 @@ aside {
 }
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
+    M E D I A  Q U E R I E S
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+@media only screen and (min-width: 768px) {
+  /* Tablet Styles */
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+  header .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .header-divider {
+    display: none;
+  }
+  header nav {
+    width: auto;
+  }
+  header nav ul {
+    display: flex;
+    justify-content: right;
+    gap: 40px;
+  }
+  aside .content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-flow: nowrap;
+  }
+  .form {
+    display: flex;
+    flex-flow: column;
+  }
+  aside .form-description {
+    width: 280px;
+    text-align: start;
+    margin-right: 86px;
+  }
+  .features {
+    width: 640px;
+  }
+  .features-items {
+    display: flex;
+    justify-content:space-around;
+    align-items: baseline;
+    flex-flow: row wrap;
+    width: 100%;
+  }
+  .features article {
+    flex-basis: 200px;
+  }
+  .features-item-description {
+    width: 200px;
+    text-align: center;
+  }
+  .reviews article {
+    display: flex;
+    justify-content: space-around;
+    width: 640px;
+  }
+  .footer-content {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    width: 640px;
+  }
+  .contact-section .features-items {
+    justify-content: space-between;
+  }
+  .contact-section article {
+    width: 50%;
+  }
+  .mission p {
+    width: 40%;
+  }
+  .faq .content-wrapper {
+    justify-content: space-between;
+}
+  .faq-content article {
+    flex-basis: 40%;
+  }
+  .faq h1 {
+    width: 100%;
+}
+}
+
+@media only screen and (min-width: 1200px) {
+  /*Desktop Styles*/
 }
 
 @media print,
@@ -413,4 +557,3 @@ aside {
     page-break-after: avoid;
   }
 }
-
