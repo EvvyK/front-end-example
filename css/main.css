@@ -21,12 +21,18 @@ nav, h1, h2, h3, h4 {
 }
 h1 {
   font-size: 2.25em;
+  font-weight: 100;
 }
 h2 {
   font-size: 1.875em;
+  font-weight: 100;
 }
 h3 {
   font-size: 1.125em;
+  font-weight: 100;
+}
+h4 {
+  font-weight: 100;
 }
 nav {
   font-weight: bold;
@@ -208,17 +214,29 @@ aside {
   width: 100%;
 }
 .input {
-  width: 288px;
+  box-sizing: border-box;
+  width: 100%;
+  color: #2a423a;
   font-style: italic;
-  height: 30px;
+  padding: 1em;
 }
 .btn {
-  margin-top: 25px;
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 20px;
   background-color: #2a423a;
-  color: whitesmoke;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #e2e3ed;
+  border: none;
+  text-align: center;
   text-transform: uppercase;
-  width: 295px;
-  height: 30px;
+  box-shadow: 6px 6px 3px #182521;
+}
+.btn:active {
+  box-shadow: 3px 3px 3px #0e1613;
+  transform: translate(3px,3px);
 }
 .features {
   display: flex;
@@ -228,12 +246,6 @@ aside {
   background-image: url("../Assets/rawpixel-800820-unsplash1.jpg");
   background-size: cover;
   color: #e2e3ed;
-}
-.features, .features-items {
-  display: flex;
-  justify-content: center;
-  flex-flow: row wrap;
-  align-items: center;
 }
 .features h2 {
   margin-bottom: 60px;
@@ -281,7 +293,10 @@ aside {
   width: 50%;
   margin: 25px 0;
 }
-
+.reviews img {
+  width: 100%;
+  height: auto;
+}
 /* ==========================================================================
   ABOUT STYLES
  ========================================================================== */
@@ -307,6 +322,7 @@ aside {
   background: #2a423a;
   color: #e2e3ed;
 }
+
 .contact-section .features-items{
   justify-content: left;
 }
@@ -428,13 +444,29 @@ address {
 
 @media only screen and (min-width: 768px) {
   /* Tablet Styles */
+  h1 {
+    font-size: 3em;
+  }
+  h2 {
+    font-size: 2.25em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  .content-wrapper {
+    max-width: 640px;
+  }
   header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   header .content-wrapper {
     display: flex;
     justify-content: space-between;
+    max-width: none;
+  }
+  header figure {
+    margin: 0;
   }
   .header-divider {
     display: none;
@@ -449,13 +481,18 @@ address {
   }
   aside .content-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: baseline;
     flex-flow: nowrap;
+  }
+  .form, .form-description {
+    width: 30%;
+    flex: 1 1 0;
   }
   .form {
     display: flex;
     flex-flow: column;
+    align-items: stretch;
   }
   aside .form-description {
     width: 280px;
@@ -463,16 +500,28 @@ address {
     margin-right: 86px;
   }
   .features article {
-    flex-basis: 50%;
+    flex-basis: 45%;
+
   }
   .features-item-description {
-    width: 200px;
+    width: 195px;
     text-align: center;
+  }
+  .reviews img {
+    width: 49%;
+    align-self: flex-start;
+    height: auto;
+  }
+  .reviews h3 {
+    width: 100%;
+    margin-top: 0;
+  }
+  .reviews article div {
+    width: 49%;
   }
   .reviews article {
     display: flex;
     justify-content: space-around;
-    width: 640px;
   }
   .footer-content {
     display: flex;
@@ -480,8 +529,13 @@ address {
     justify-content: space-around;
     width: 640px;
   }
+  .contact-section{
+    display: flex;
+  }
+
   .contact-section .features-items {
-    justify-content: space-between;
+    justify-content: center;
+    text-align:left;
   }
   .contact-section article {
     width: 50%;
@@ -502,6 +556,19 @@ address {
 
 @media only screen and (min-width: 1200px) {
   /*Desktop Styles*/
+  body {
+    font-size: 1.125em;
+    line-height: 1.333;
+  }
+  h1 {
+    font-size: 3.75em;
+  }
+  h2 {
+    font-size: 2.25em;
+  }
+  h3 {
+    font-size: 1.875em;
+  }
   .content-wrapper {
     max-width: 960px;
   }
@@ -509,36 +576,28 @@ address {
     margin: auto;
   }
   .hero h1 {
-    width: 60%;
+    width: 80%;
   }
   aside .content-wrapper {
     justify-content: space-around;
+    gap: 15%;
+    max-width: 1140px;
   }
   aside .content-wrapper .form-description,
   aside .content-wrapper .form {
-    width: 30%;
-  }
-  aside h3 {
-    font-size: 25px;
+    width: 20%;
   }
   .features h2{
     width: 95%;
-    font-size: 36px;
   }
   .features article {
     flex-basis: 33%;
-  }
-  .reviews h2 {
-    font-size: 36px;
   }
   .reviews h3 {
     width: 80%;
   }
   .reviews article div {
     width: 45%;
-  }
-  .mission h1 {
-    font-size: 48px;
   }
   .contact-section h1 {
     margin: auto;
@@ -550,7 +609,6 @@ address {
   }
   .faq h1 {
     width: 100%;
-    font-size: 48px;
   }
 }
 
