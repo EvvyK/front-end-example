@@ -199,6 +199,12 @@ footer .copyright {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+  background: url("../Assets/jake-melara-30679-unsplash.jpg") center no-repeat #333;
+  background-size: cover;
+  height: 600px;
+}
+.hero h1 {
+  color: #e2e3ed;
 }
 aside {
   display: flex;
@@ -245,7 +251,7 @@ aside {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  background-image: url("../Assets/rawpixel-800820-unsplash1.jpg");
+  background: url("../Assets/rawpixel-800820-unsplash1.jpg") center no-repeat #333;
   background-size: cover;
   color: #e2e3ed;
 }
@@ -587,6 +593,12 @@ address {
   }
   .hero h1 {
     width: 80%;
+    margin-top: 0;
+    text-shadow:
+      -2px -2px 4px rgba(0, 0, 0, 0.4),
+      2px -2px 4px rgba(0, 0, 0, 0.4),
+      -2px 2px 4px rgba(0, 0, 0, 0.4),
+      2px 2px 4px rgba(0, 0, 0, 0.4);
   }
   aside .content-wrapper {
     justify-content: space-around;
