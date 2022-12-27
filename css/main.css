@@ -38,8 +38,13 @@ h4 {
 nav {
   font-weight: bold;
   font-size: 1.125em;
+}	
+img { 
+	width: 100%;
 }
-
+figure {
+  margin: 0;
+}
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -127,6 +132,14 @@ header .content-wrapper {
   align-content: center;
   flex-flow: row wrap;
   margin: 0;
+}
+header figure {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  padding-bottom: 10px;
 }
 header figure img {
 max-width: 230px;
@@ -466,6 +479,9 @@ address {
   h4 {
     font-size: .875em;
   }
+  p {
+    font-size: .875em;
+  }
   .content-wrapper {
     max-width: 640px;
   }
@@ -478,9 +494,11 @@ address {
     justify-content: space-between;
     max-width: none;
   }
-  /* header figure {
+  header figure {
     margin: 0;
-  } */
+    justify-content: flex-start;
+    max-width: 220px;
+  }
   .header-divider {
     display: none;
   }
@@ -520,9 +538,9 @@ address {
     width: 195px;
     text-align: center;
   }
-  .reviews img {
+  .reviews figure {
     width: 49%;
-    align-self: flex-start;
+    align-self: center;
     height: auto;
   }
   .reviews h3 {
@@ -590,6 +608,9 @@ address {
   }
   header .content-wrapper {
     margin: auto;
+  }
+  header figure {
+    max-width: 280px;
   }
   .hero h1 {
     width: 80%;
