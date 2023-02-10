@@ -291,13 +291,13 @@ aside {
   flex-flow: row wrap;
   width: 100%;
 }
-.features-icons{
+.features i {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  font-size: 4em;
-  padding: 25px 0;
+	font-size: 3.75em;
+  margin-bottom: 40px;
 }
 .reviews {
   display: flex;
