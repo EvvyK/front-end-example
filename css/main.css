@@ -191,10 +191,31 @@ footer p {
 footer .contact {
   margin-bottom: 50px;
 }
-footer .social-icons {
+footer .social {
+  width: 207px;
+  justify-content: space-between;
+}
+footer .social i {
   display: flex;
-  justify-content: space-around;
-  justify-content: center;
+  color: #527158;
+  font-size: 2em;
+  flex-flow: row wrap;
+  padding: 5px 20px;
+}
+footer .social a:link {
+  text-decoration: none;
+}
+footer .social a:visited {
+  text-decoration: none;
+  color:#527158;
+}
+footer .social a:hover {
+  text-decoration: none;
+  color:#2a423a;
+}
+footer .social a:active {
+  text-decoration: none;
+  color:#527158;
 }
 footer .social p {
   display: flex;
