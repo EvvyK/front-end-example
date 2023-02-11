@@ -196,27 +196,22 @@ footer .social {
   justify-content: space-between;
 }
 footer .social i {
-  display: flex;
-  color: #527158;
   font-size: 2em;
-  flex-flow: row wrap;
   padding: 5px 20px;
 }
-footer .social a:link {
-  text-decoration: none;
-}
-footer .social a:visited {
+footer .social a {
+  transition: transform 500ms ease-in-out 0ms, color 500ms ease-in-out 0ms;
   text-decoration: none;
   color:#527158;
 }
-footer .social a:hover {
+footer .social a:hover,
+footer .social a:active,
+footer .social a:focus {
+  transform: scale(1.2);
   text-decoration: none;
   color:#2a423a;
 }
-footer .social a:active {
-  text-decoration: none;
-  color:#527158;
-}
+
 footer .social p {
   display: flex;
   justify-content: center;
